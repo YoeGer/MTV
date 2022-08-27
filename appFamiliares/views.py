@@ -9,7 +9,11 @@ def familiares(request):
     familiar1.save()
     familiar2.save()
     familiar3.save()
-    texto = 'Familiares creados'
-    return HttpResponse(texto)
+    texto1 = f'HERMANO: {familiar1.nombre}, de {familiar1.edad} anios y fecha de nacimiento {familiar1.cumpleanios}'
+    texto2 = f'PAPA: {familiar2.nombre}, de {familiar2.edad} anios y fecha de nacimiento {familiar2.cumpleanios}'
+    texto3 = f'MAMA: {familiar3.nombre}, de {familiar3.edad} anios y fecha de nacimiento {familiar3.cumpleanios}'
+    return HttpResponse(texto1, texto2, texto3)
+    
 
-
+def inicio(request): 
+    return render (request, 'appFamiliares/inicio.html')
