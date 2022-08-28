@@ -10,8 +10,9 @@ def familiares(request):
     familiar1.save()
     familiar2.save()
     familiar3.save()
-    texto= 'Familiares creados'
+    texto= f'Los familiares creados son: --- HERMANO: {familiar1.nombre} --- PAPA: {familiar2.nombre} --- MAMA: {familiar3.nombre}'
     return HttpResponse(texto)
+    
     
 
 def inicio(request): 
